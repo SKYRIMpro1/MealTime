@@ -4,6 +4,7 @@ var ingredientsEl = document.getElementById('ingredients');
 var recipeDescEl = document.getElementById('recipe-desc')
 var recipePicEl = document.getElementsByTagName('recipe-pic');
 
+
 var apiKey = "o7645HZzM0ujmdeIjvnj4W328P77zYuFTWFGoXhL";
 
 
@@ -17,13 +18,13 @@ fetch(mealDB)
 })
     .then(function(data) {
     recipeNameEl.innerHTML = "Recipe Name: " + (data.meals[0].strMeal);
-    recipePicEl.innerHTML = "Pictures: " + (data.meals[0].strYouTube);
+    recipePicEl.innerHTML = "Pictures: " + (data.meals.strYouTube);
     recipeDescEl.innerHTML = "Recipe Instructions: " + (data.meals[0].strInstructions);
     console.log(data.meals[0].strMeal) 
     ingredientsEl.innerHTML = "Ingredients: " + (data.meals[0].strIngredient1);
     
     var ingredientsArr = []
-    
+    // data.meals.strMeal = mealDesc
     for (let i = 0; i < ingredientsArr.length; i++) {
     console.log(ingredientsArr);
     }
