@@ -17,17 +17,29 @@ fetch(mealDB)
         return response.json();
 })
     .then(function(data) {
-    recipeNameEl.innerHTML = "Recipe Name: " + (data.meals[0].strMeal);
-    recipePicEl.innerHTML = "Pictures: " + (data.meals.strYouTube);
-    recipeDescEl.innerHTML = "Recipe Instructions: " + (data.meals[0].strInstructions);
-    console.log(data.meals[0].strMeal) 
-    ingredientsEl.innerHTML = "Ingredients: " + (data.meals[0].strIngredient1);
+//    loop for the top 3 results and display
+    for (let i = 0; i < 3; i++) {
+    const recipeInfo = document.querySelector('#recipe-info');
     
-    var ingredientsArr = []
-    // data.meals.strMeal = mealDesc
-    for (let i = 0; i < ingredientsArr.length; i++) {
-    console.log(ingredientsArr);
-    }
+    const recipeContainer = document.createElement('div');
+
+    const recipeName = document.createElement('h2');
+    recipeName.textContent = 'Recipe Name: ' + (data.meals[i].strMeal);
+    // sect.appendChild(recipeName);
+
+    const instructions = document.createElement('p');
+    instructions.textContent = 'Recipe Description: ' + (data.meals[i].strInstructions);
+
+    
+    // desc.appendChild(recipeDesc)
+
+    recipeContainer.appendChild(recipeName);
+    recipeContainer.appendChild(instructions);
+
+    recipeInfo.appendChild(recipeContainer)
+    console.log(data.meals[i].strMeal);
+}
+    
 });
 
 }
