@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bulma.min.css">
     <title>Meal Time App</title>
 </head>
 <header>
@@ -12,11 +13,19 @@
 </header>
 <body>
 <div id="container">
-    <input id="food-search"></input> <br />
-    <button id="search-btn">Search</button>
-    <div id="recipe-info"></div>
-    <div id="nutrition"></div>
-
+    <div id="search" class="">
+        <input id="food-search" ></input> <br />
+        <button id="search-btn" class="is-lg">Search</button>
+    </div>
+    <div id="recipe-info" >
+        <h2 id="recipe-title" class="title"></h2>
+        <p id="recipe-desc"></p>    
+    </div>
+    <div id="nutrition-info" class="container">
+        <h2 id="nutrition-title"></h2>
+        <p id="nutrition-desc"></p>
+    </div>
+    </div>
     
 </div>
     <script src="script.js"></script>

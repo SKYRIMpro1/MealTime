@@ -54,12 +54,12 @@ function foodNutrition() {
     })
         .then(function(db) {
             console.log(db)
-            const usda = document.querySelector('#nutrition');
+            const usda = document.querySelector('#nutrition-info');
             usda.innerHTML = ""
 
             const usdaContainer = document.createElement('div');
 
-            const usdaTitle = document.createElement('h1');
+            const usdaTitle = document.createElement('h2');
             usdaTitle.textContent = "Nutritional Value: "
             usda.appendChild(usdaTitle);
 
@@ -71,7 +71,7 @@ function foodNutrition() {
             for (let i = 0; i < foods.length; i++) {
                 var food = foods[i];
                 
-            usdaName = document.createElement('h3');
+            usdaName = document.createElement('p');
             
             usdaName.textContent = food.nutrientName + " - " + food.value + food.unitName;
             
