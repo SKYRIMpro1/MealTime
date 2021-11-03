@@ -39,7 +39,7 @@ function getFoodInfo() {
         }
     });
 }
-
+// search for nutritional value
 function foodNutrition(){
     var nutritionEl = document.getElementById("food-search")
     var apiFoodUsda = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key=' + apiKey + '&query=' + nutritionEl.value
