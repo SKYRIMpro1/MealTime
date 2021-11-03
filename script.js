@@ -19,10 +19,11 @@ function getFoodInfo() {
             return response.json();
     })
         .then(function(data) {
+        const recipeInfo = document.querySelector('#recipe-info');
+        recipeInfo.innerHTML = "" 
     //    loop for the top 3 results and display
         for (let i = 0; i < 3; i++) {
-        const recipeInfo = document.querySelector('#recipe-info');
-        
+    
         const recipeContainer = document.createElement('div');
 
         const recipeName = document.createElement('h2');
@@ -34,32 +35,55 @@ function getFoodInfo() {
         recipeContainer.appendChild(recipeName);
         recipeContainer.appendChild(instructions);
 
-        recipeInfo.appendChild(recipeContainer)
+        recipeInfo.appendChild(recipeContainer);
         console.log(data.meals[i].strMeal);
         }
     });
 }
 // search for nutritional value
-function foodNutrition(){
-    var nutritionEl = document.getElementById("food-search")
-    var apiFoodUsda = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key=' + apiKey + '&query=' + nutritionEl.value
+function foodNutrition() {
+    var usdaSearchEl = document.getElementById("food-search");
+    var apiFoodUsda = 'https://api.nal.usda.gov/fdc/v1/foods/search?api_key=' + apiKey + '&query=' + usdaSearchEl.value;
 
     fetch(apiFoodUsda) 
         .then(function(res) {
+            console.log(res)
             return res.json();
+            
     })
         .then(function(db) {
             console.log(db)
-            const nutri = document.querySelector('#nutrition');
-            const nutriContainer = document.createElement('div');
+            const usda = document.querySelector('#nutrition');
+            usda.innerHTML = ""
+            const usdaTitle = document.createElement('h1');
+            usdaTitle.textContent = "Nutritional Value: "
+            usda.appendChild(usdaTitle);
 
-            foodValue = document.createElement('h2');
-            foodValue.textContent = (db.foods.foodNutrients[0].nutrientName[0])
+            const usdaContainer = document.createElement('div');
 
-            nutriContainer.appendChild(foodValue)
-            nutri.appendChild(nutriContainer)
+            var foods = db.foods[0].foodNutrients
+            
+
+            for (let i = 0; i < foods.length; i++) {
+                var food = foods[i];
+                
+            usdaName = document.createElement('h3');
+            
+            usdaName.textContent = food.nutrientName + " - " + food.value + food.unitName;
+            
+            usdaContainer.appendChild(usdaName);
+
+            // console.log(apiFoodUsda)
+            
+            // console.log(db.foods[0].foodNutrients[i].nutrientName);
+        }
+        usda.appendChild(usdaContainer);
         })
 }
 
+
 var submitBtn = document.getElementById("search-btn");
-submitBtn.addEventListener("click", getFoodInfo, foodNutrition);
+submitBtn.addEventListener("click", function(){
+    getFoodInfo();
+    foodNutrition();
+});
