@@ -19,6 +19,7 @@ function getFoodInfo() {
             return response.json();
     })
         .then(function(data) {
+            // container to hold recipes
         const recipeInfo = document.querySelector('#recipe-info');
         recipeInfo.innerHTML = "" 
     //    loop for the top 3 results and display
@@ -55,11 +56,14 @@ function foodNutrition() {
             console.log(db)
             const usda = document.querySelector('#nutrition');
             usda.innerHTML = ""
+
+            const usdaContainer = document.createElement('div');
+
             const usdaTitle = document.createElement('h1');
             usdaTitle.textContent = "Nutritional Value: "
             usda.appendChild(usdaTitle);
 
-            const usdaContainer = document.createElement('div');
+            
 
             var foods = db.foods[0].foodNutrients
             
