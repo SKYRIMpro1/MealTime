@@ -5,6 +5,8 @@ To help ease the struggle with determining what to cook and the nutritional valu
 
 ## Screenshots
 
+<a href="./images/Search.png">Search Box</a>
+
 ## Built With:
 
 - HTML
