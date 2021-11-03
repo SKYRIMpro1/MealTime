@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bulma.min.css">
+    <!-- bulma css framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Meal Time App</title>
 </head>
 <header>
-    <h1 id="title">Meal Time</h1>
-    <p>To help ease the struggle with determining what to cook and the nutritional value of the meal. Type in a keyword ingredient, and the app will run a search against a recipe database. The details for the recipe will be displayed. When looking at and selecting ingredients, the nutritional value will then be listed. </p>
+    <h1 id="title" class="is-size-1">Meal Time</h1>
+    <p class="is-size-5">To help ease the struggle with determining what to cook and the nutritional value of the meal. Type in a keyword ingredient, and the app will run a search against a recipe database. The details for the recipe will be displayed. When looking at and selecting ingredients, the nutritional value will then be listed. </p>
 </header>
 <body>
-<div id="container">
-    <div id="search" class="">
+<section id="container">
+    <div id="search">
         <input id="food-search" ></input> <br />
         <button id="search-btn" class="is-lg">Search</button>
     </div>
-    <div id="recipe-info" >
-        <h2 id="recipe-title" class="title"></h2>
-        <p id="recipe-desc"></p>    
+
+    <div id="recipe-info">
+        <h2 id="recipe-title" class="is-size-2"></h2>
+        <p id="recipe-desc" class="is-size-7"></p>    
     </div>
-    <div id="nutrition-info" class="container">
+
+    <div id="nutrition-info" class="is-size-4">
         <h2 id="nutrition-title"></h2>
         <p id="nutrition-desc"></p>
     </div>
-    </div>
-    
-</div>
+</section>
     <script src="script.js"></script>
 
 </body>

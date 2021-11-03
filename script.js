@@ -63,11 +63,8 @@ function foodNutrition() {
             usdaTitle.textContent = "Nutritional Value: "
             usda.appendChild(usdaTitle);
 
-            
-
             var foods = db.foods[0].foodNutrients
             
-
             for (let i = 0; i < foods.length; i++) {
                 var food = foods[i];
                 
@@ -87,7 +84,7 @@ function foodNutrition() {
 
 
 var submitBtn = document.getElementById("search-btn");
-submitBtn.addEventListener("click", function(){
+    submitBtn.addEventListener("click", function(){
     getFoodInfo();
     foodNutrition();
 });
