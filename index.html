@@ -8,28 +8,33 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <title>Meal Time App</title>
 </head>
-<header>
-    <h1 id="title" class="is-size-1">Meal Time</h1>
-    <p class="is-size-5">To help ease the struggle with determining what to cook and the nutritional value of the meal. Type in a keyword ingredient, and the app will run a search against a recipe database. The details for the recipe will be displayed. When looking at and selecting ingredients, the nutritional value will then be listed. </p>
+<header class="is-mobile is-desktop">
+    <h1 id="title" class="is-size-1 is-strong is-centered">Meal Time</h1>
+    <p class="is-size-6">To help ease the struggle with determining what to cook and the nutritional value of the meal. Type in a keyword ingredient, and the app will run a search against a recipe database. The details for the recipe will be displayed. When looking at and selecting ingredients, the nutritional value will then be listed. </p>
 </header>
 <body>
-<section id="container">
+<nav id="container" class="column panel is-info is-one-fifth is-3 is-mobile is-desktop">
+    <p class="panel-heading">
+        Recipes
+    </p>
     <div id="search">
         <input id="food-search" ></input> <br />
-        <button id="search-btn" class="is-lg">Search</button>
+        <button id="search-btn" class="is-size-4">Search</button>
     </div>
+</nav>
 
-    <div id="recipe-info">
-        <h2 id="recipe-title" class="is-size-2"></h2>
+    <div id="recipe-info" >
+        <h2 id="recipe-title" class="is-size-1"></h2>
         <p id="recipe-desc" class="is-size-7"></p>    
     </div>
 
-    <div id="nutrition-info" class="is-size-4">
-        <h2 id="nutrition-title"></h2>
-        <p id="nutrition-desc"></p>
+    <div id="nutrition-info" class="column">
+        <h2 id="nutrition-title" class="column"></h2>
+        <p id="nutrition-desc" class="column"></p>
     </div>
-</section>
+</div>
     <script src="script.js"></script>
+   
 
 </body>
 </html>

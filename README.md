@@ -32,4 +32,4 @@ John Nguyen
 <li><a href="mailto:jnguyeningco@gmail.com">Email</a>
 <li><a href="https://www.linkedin.com/in/john-nguyen-49158621a">Linked In</a>
 <li><a href="https://github.com/SKYRIMpro1/MealTime">Meal Time Group Project Repo</a>
-<li><a href="https://SKYRIMpro1.github.io/MealTime/main.index.html">Meal Time Group Project</a>
+<li><a href="https://skyrimpro1.github.io/MealTime/">Meal Time Group Project</a>
