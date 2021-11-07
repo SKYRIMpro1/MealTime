@@ -1,0 +1,30 @@
+.title-style{
+    color: white;
+    background-color:gray;
+    border-bottom: solid black 3px;
+}
+
+.center {
+    color:white;
+    margin: auto;
+    border-top:black solid 1px;
+    padding: 10px 0px;
+    background-color: gray;
+  }
+.center-div {
+    margin: auto;
+    border-bottom:black solid 1px;
+    padding: 10px 0px;
+    background-color: gray;
+  }
+
+.background-color{
+    background-color:rgb(172, 205, 255)
+}
+.text-center{
+    text-align:center;
+}
+
+.recipe-color{
+    background-color: rgb(208, 244, 255);
+}
