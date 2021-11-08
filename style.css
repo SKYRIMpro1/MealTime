@@ -3,7 +3,9 @@
     background-color:gray;
     border-bottom: solid black 3px;
 }
-
+.body {
+    margin-bottom: none;
+}
 .center {
     color:white;
     margin: auto;
@@ -24,7 +26,6 @@
 .text-center{
     text-align:center;
 }
-
 .recipe-color{
     background-color: rgb(208, 244, 255);
 }
