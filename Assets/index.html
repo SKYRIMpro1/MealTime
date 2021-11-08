@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="/MealTime/Assets/style.css">
     <title>Meal Time App</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Favicon.png">
 </head>
 
 <header class="is-mobile is-desktop">
@@ -15,25 +17,30 @@
 </header>
 <!--Descriptive text to inform user on what app offers and performs-->
 <body class="is-mobile is-desktop">
+<!-- Sectionining out to Apply Hero photo-->
+<section class="hero is-halfheight has-bg-img">
+<div class="hero-body container">
   <div class="container is-widescreen">
-    <p class="background-color box is-size-6">Please search below with what food ingredient that you would like to cook with and the available recipes and nutritional facts will display below. </p>
+    <p class="background-color box is-size-6">Please search using the Ingredient you would like to cook with, available recipes and nutritional information will display below. </p>
   </div>
 <nav id="container" class="column panel is-info is-one-fifth is-4 is-mobile is-desktop">
     <p class="panel-heading">
         Recipes
     </p> <!--Search text and button-->
-    <div id="search">
+    <div id="search" class="is-flex-desktop is-flex-widescreen is-flex-fullhd">
         <input class="input" placeholder="Example: Chicken" id="food-search" ></input> <br />
         <button id="search-btn" class="button is-size-6">Search</button>
     </div>
 </nav>
+</div>
+</section>
 <!--Recipe box-->
     <div class="box recipe-color" id="recipe-info">
         <h2 id="recipe-title" class="is-size-4">Your recipes!</h2>
         <p id="recipe-desc" class="is-size-7"></p>    
     </div>
 <!--Nutritional facts box-->
-    <div id="nutrition-info" class="column">
+    <div id="nutrition-info" class="column has-background-grey-lighter">
         <h2 id="nutrition-title" class="column"></h2>
         <p id="nutrition-desc" class="column"></p>
     </div>

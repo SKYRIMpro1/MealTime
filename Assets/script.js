@@ -24,11 +24,21 @@ function getFoodInfo() {
         recipeInfo.innerHTML = "" 
     //    loop for the top 3 results and display
         for (let i = 0; i < 3; i++) {
+            const recipeData = document.createElement('div');
+        recipeData.className = 'columns'
+        const recipeImg = document.createElement('div');
+        var foodImg = document.createElement('img');
+        foodImg.src = data.meals[i].strMealThumb;
+        recipeImg.appendChild(foodImg);
+        console.log(data.meals[i].strMealThumb)
     
         const recipeContainer = document.createElement('div');
+        recipeContainer.className = 'column'
+        recipeImg.className = 'column'
 
         const recipeName = document.createElement('h2');
         recipeName.textContent = (data.meals[i].strMeal);
+        recipeName.className = 'is-size-4';
 
         const instructions = document.createElement('p');
         instructions.textContent = (data.meals[i].strInstructions);
@@ -38,6 +48,10 @@ function getFoodInfo() {
 
         recipeInfo.appendChild(recipeContainer);
         console.log(data.meals[i].strMeal);
+
+        recipeData.appendChild(recipeImg);
+        recipeData.appendChild(recipeContainer);
+        recipeInfo.appendChild(recipeData);
         }
     });
 }

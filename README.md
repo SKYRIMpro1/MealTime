@@ -37,3 +37,7 @@ John Nguyen
 Stephen Stewart
 <li><a href="mailto:stephen12stewart@gmail.com">Email</a>
 <li><a href="linkedin.com/in/stephen-stewart-621243225">LinkedIn</a>
+
+Aidan Angelo
+<li><a href="mailto:aidanangelowashere@gmail.com">Email</A>
+<li><a href="https://www.linkedin.com/in/aidan-angelo-7234a3215/">Linkedin</a>
