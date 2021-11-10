@@ -6,35 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bulma css framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Meal Time App</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/Favicon.png">
 </head>
+
 <header class="is-mobile is-desktop">
-    <h1 id="title" class="is-size-1 is-strong is-centered">Meal Time</h1>
-    <p class="is-size-6">To help ease the struggle with determining what to cook and the nutritional value of the meal. Type in a keyword ingredient, and the app will run a search against a recipe database. The details for the recipe will be displayed. When looking at and selecting ingredients, the nutritional value will then be listed. </p>
+    <h1 id="title" class="text-center title-style is-size-1 is-strong is-centered">Meal Time</h1>
 </header>
-<body>
-<nav id="container" class="column panel is-info is-one-eighth is-3 is-mobile is-desktop">
+<!--Descriptive text to inform user on what app offers and performs-->
+<body class="is-mobile is-desktop">
+<!-- Sectionining out to Apply Hero photo-->
+<section class="hero is-halfheight has-bg-img">
+<div class="hero-body container">
+  <div class="container is-widescreen">
+    <p class="background-color box is-size-6">Please search using the Ingredient you would like to cook with, available recipes and nutritional information will display below. </p>
+  </div>
+<nav id="container" class="column panel is-info is-one-fifth is-4 is-mobile is-desktop">
     <p class="panel-heading">
         Recipes
-    </p>
-    <div id="search">
-        <input id="food-search" ></input> <br />
-        <button id="search-btn" class="is-size-6">Search</button>
+    </p> <!--Search text and button-->
+    <div id="search" class="is-flex-desktop is-flex-widescreen is-flex-fullhd">
+        <input class="input" placeholder="Example: Chicken" id="food-search" ></input> <br />
+        <button id="search-btn" class="button is-size-6">Search</button>
     </div>
 </nav>
-
-    <div id="recipe-info" >
-        <h2 id="recipe-title" class="is-size-1"></h2>
+</div>
+</section>
+<!--Recipe box-->
+    <div class="box recipe-color" id="recipe-info">
+        <h2 id="recipe-title" class="is-size-4">Your recipes!</h2>
         <p id="recipe-desc" class="is-size-7"></p>    
     </div>
-
-    <div id="nutrition-info" class="column">
+<!--Nutritional facts box-->
+    <div id="nutrition-info" class="column has-background-grey-lighter">
         <h2 id="nutrition-title" class="column"></h2>
         <p id="nutrition-desc" class="column"></p>
     </div>
 </div>
-    <script src="script.js"></script>
-   
 
+<script src="./assets/script.js"></script>
+<footer>
+  <div class="is-three-quarters center">
+    <h2 class="text-center center is-size-3">Group 4 Project 1
+      <h3 class="text-center center-div">MealTime</h3>
+    </h2>
+  </div>
+</footer>
 </body>
 </html>
