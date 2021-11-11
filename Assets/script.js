@@ -30,6 +30,8 @@ function getFoodInfo() {
         var foodImg = document.createElement('img');
         foodImg.src = data.meals[i].strMealThumb;
         recipeImg.appendChild(foodImg);
+        foodImg.width = 400;
+        foodImg.height = 400;
         console.log(data.meals[i].strMealThumb)
     
         const recipeContainer = document.createElement('div');

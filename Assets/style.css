@@ -6,6 +6,15 @@
 .body {
     margin-bottom: none;
 }
+
+recipeImg{
+    flex-wrap: wrap;
+    margin: auto auto auto;
+    position: relative;
+    object-fit: fill;
+    background-color: khaki;
+  }
+
 .center {
     color:white;
     margin: auto;
