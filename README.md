@@ -5,8 +5,9 @@ To help ease the struggle with determining what to cook and the nutritional valu
 
 ## Screenshots
 
-- <a href="./images/Search.png">Recipe Display with Search Box</a>
-- <a href="./images/Nutritional-Value.png">Nutritional Values Display</a>
+- <a href="./images/Search2.png">Recipe Display with Search Box</a>
+- <a href="./images/Recipe2.png">Return Recipe</a>
+- <a href="./images/Nutritional-Value2.png">Nutritional Values Display</a>
 - <a href="./images/FunctionMealDB-api.png">MealDB api Function</a>
 - <a href="./images/FunctionUSDA-api.png">USDA api Function</a>
 - <a href="./images/FunctionSearch-2api.png">Function to Search both APIs</a>
