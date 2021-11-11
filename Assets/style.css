@@ -30,6 +30,6 @@
     background-color: rgb(208, 244, 255);
 }
 .has-bg-img{ 
-    background: url('images/fresh-food-banner.jpg')center center; 
+    background: url('../images/fresh-food-banner.jpg')center center; 
     background-size:cover;
  }
